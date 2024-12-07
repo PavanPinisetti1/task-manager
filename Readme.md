@@ -137,22 +137,27 @@ This project is a RESTful API for managing tasks, built with Node.js, Express, a
 
 ### Folder Structure
 
-   - task-manager-backend/
-   - ├── src/
-   - │   ├── models/
-   - │   │   └── Task.js            # Task schema and model
-   - │   ├── routes/
-   - │   │   └── taskRoutes.js      # Task-related API routes
-   - │   ├── middlewares/
-   - │   │   ├── errorMiddleware.js # Centralized error handling
-   - │   │   └── authMiddleware.js  # Optional: Authentication
-   - │   ├── utils/
-   - │   │   └── validation.js      # Validation logic
-   - │   ├── app.js                 # Express app setup
-   - │   └── server.js              # Server entry point
-   - ├── .env                       # Environment variables
-   - ├── package.json               # Project dependencies
-   - └── README.md                  # Documentation
+```
+task-manager-backend/
+├── src/
+│   ├── models/
+│   │   └── Task.js            # Task schema and model
+│   ├── routes/
+│   │   └── taskRoutes.js      # Task-related API routes
+│   ├── middlewares/
+│   │   ├── errorMiddleware.js # Centralized error handling
+│   │   └── authMiddleware.js  # Optional: Authentication
+│   ├── utils/
+│   │   └── validation.js      # Validation logic
+│   ├── app.js                 # Express app setup
+│   └── server.js              # Server entry point
+├── .env                       # Environment variables
+├── package.json               # Project dependencies
+└── README.md                  # Documentation
+
+
+```
+  
 
 
 
