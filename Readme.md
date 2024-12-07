@@ -37,8 +37,33 @@ This project is a RESTful API for managing tasks, built with Node.js, Express, a
 
   1. Clone the Repository
      
-        ``` git clone https://github.com/your-repo/task-manager-backend.git
-            cd task-manager-backend ```
+        - git clone https://github.com/your-repo/task-manager-backend.git
+        - cd task-manager-backend
+    
+  2. Install Dependencies
+
+        - npm install
+    
+  3. Set Up Environment Variables
+
+     Create a .env file in the root directory and configure the following variables:
+     
+        - PORT=4000
+        - MONGO_URI=mongodb://localhost:27017/task-manager //Here use the connection string if the Mongo Atlas is Used.
+    
+  4. Run MongoDB Server
+
+     If using a local MongoDB instance, start the MongoDB server:
+
+        - mongod
+
+  6. Start the Server
+
+        - npm start / node app.js
+
+  7. Test the API
+
+        - Use Postman, curl, or any API testing tool to test the endpoints.
 
      
 
