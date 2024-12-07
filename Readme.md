@@ -36,8 +36,12 @@ This project is a RESTful API for managing tasks, built with Node.js, Express, a
 # Steps to Run the Backend
 
   1. Clone the Repository
-        ``` git clone https://github.com/your-repo/task-manager-backend.git ```
-        ``` cd task-manager-backend ```
+     
+        ``` git clone https://github.com/your-repo/task-manager-backend.git
+     
+         cd task-manager-backend ```
+
+     
 
 
 
