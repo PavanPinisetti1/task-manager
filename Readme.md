@@ -70,6 +70,96 @@ This project is a RESTful API for managing tasks, built with Node.js, Express, a
 
 
 
+### API Documentation
+
+# Base URL
+
+       - http://localhost:4000
+
+# Endpoints
+
+  1. Create a Task
+
+      - Method: POST
+      - Endpoint: /tasks
+      - Request Body:
+          - {
+              "title": "New Task",
+              "description": "This is a new task",
+              "status": "TODO",
+              "priority": "HIGH",
+              "dueDate": "2024-12-30T00:00:00Z"
+            }
+    - Response:
+        Returns the newly created task.
+
+   2. Get All Tasks
+
+        - Method: GET
+        - Endpoint: /tasks
+        - Query Parameters:
+            - status (optional): Filter by status (TODO, IN_PROGRESS, COMPLETED).
+            - priority (optional): Filter by priority (LOW, MEDIUM, HIGH).
+            - sort (optional): Sort by createdAt or dueDate (ascending/descending).
+            - limit (optional): Number of tasks per page.
+            - skip (optional): Offset for pagination.
+        - Response:
+            Returns an array of tasks.
+          
+    3. Get a Task by ID
+
+        - Method: GET
+        - Endpoint: /tasks/:id
+        - Response:
+            Returns the task object or a 404 error if not found.
+
+    4. Update a Task
+    
+        - Method: PUT
+        - Endpoint: /tasks/:id
+        - Request Body:
+           - {
+                "title": "Updated Task Title",
+                "status": "IN_PROGRESS"
+             }
+        - Response:
+            Returns the updated task.
+
+
+    5. Delete a Task
+    
+        - Method: DELETE
+        - Endpoint: /tasks/:id
+        - Response:
+            Returns a 204 No Content status if successful.
+
+
+
+### Folder Structure
+
+task-manager-backend/
+├── src/
+│   ├── models/
+│   │   └── Task.js            # Task schema and model
+│   ├── routes/
+│   │   └── taskRoutes.js      # Task-related API routes
+│   ├── middlewares/
+│   │   ├── errorMiddleware.js # Centralized error handling
+│   │   └── authMiddleware.js  # Optional: Authentication
+│   ├── utils/
+│   │   └── validation.js      # Validation logic
+│   ├── app.js                 # Express app setup
+│   └── server.js              # Server entry point
+├── .env                       # Environment variables
+├── package.json               # Project dependencies
+└── README.md                  # Documentation
+
+
+
+### Error Handling
+
+    - Uses middleware for centralized error handling.
+    - Returns appropriate HTTP status codes (e.g., 400 for validation errors, 404 for not found).
 
 
 
